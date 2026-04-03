@@ -7,12 +7,12 @@ job:
   deploy:
     runs-on: ubuntu-lates
     steps:
-      -name: ssh 원격 명령
-        use: appleboy/ssh-action@master
+      - name: ssh 원격 명령
+        uses: appleboy/ssh-action@master
         with:
-          host: %{{secrets.EC2.HOST}}
+          host: ${{secrets.EC2.HOST}}
           username: ec2-user
-          key: %{{secrets.EC2.KEY}}
+          key: ${{secrets.EC2.KEY}}
           port: 22
           script: |
             # 1. 프로젝트 경로로 이동
