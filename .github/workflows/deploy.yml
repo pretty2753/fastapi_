@@ -8,7 +8,7 @@ job:
     runs-on: ubuntu-lates
     steps:
       -name: ssh 원격 명령
-        uses: appleboy/ssh-action@master
+        use: appleboy/ssh-action@master
         with:
           host: %{{secrets.EC2.HOST}}
           username: ec2-user
