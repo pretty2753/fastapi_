@@ -3,7 +3,7 @@ name : fastapi를 aws linux 에 배포하기
 on:
   push:
     branches: ["master"] # master 브랜치에 push될 때 아래의 job을 실행해라 라는 의미
-job:
+jobs:
   deploy:
     runs-on: ubuntu-lates
     steps:
